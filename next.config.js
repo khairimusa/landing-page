@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/kai-next-template",
+  basePath: "/",
 
   images: {
     unoptimized: true,
