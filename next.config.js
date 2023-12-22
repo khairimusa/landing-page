@@ -1,8 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "/",
-
+  basePath: "/landing-page",
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/landing-page",
+        basePath: false,
+        permanent: false,
+        statusCode: 301,
+      },
+    ];
+  },
+  reactStrictMode: true,
+  trailingSlash: true,
+  swcMinify: true,
   images: {
     unoptimized: true,
   },
