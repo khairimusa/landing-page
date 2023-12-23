@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Container>
-      <div className="border-b flex flex-row md:flex-col gap-8 items-center justify-between  p-4">
-        <div className=" w-1/4 flex justify-center items-center">
+      <div className="flex flex-row md:flex-col gap-8 items-center justify-between p-4">
+        <div className="w-1/4 flex justify-center items-center">
           <Avatar className="h-32 w-32">
             <AvatarImage src="/avatars/01.png" alt="avatar" />
             <AvatarFallback>KM</AvatarFallback>
@@ -25,9 +25,9 @@ export default function Page() {
             Hi, Im Khairi
           </h2>
           <p className="leading-7 mt-6 text-lg">
-            I'm a Software Developer based in Kuala Lumpur, Malaysia. Currently,
-            i work for Capital A . My main focus now is building new features
-            for ikhlas.com for both Web and Mobile Application .
+            I&apos;m a Software Developer based in Kuala Lumpur, Malaysia.
+            Currently, i work for Capital A . My main focus now is building new
+            features for ikhlas.com for both Web and Mobile Application .
           </p>
         </div>
       </div>

@@ -65,7 +65,7 @@ export function MailList({ items }: MailListProps) {
                   {item.products.length ? (
                     <ul className="flex flex-wrap">
                       {item.products.map((product, key) => (
-                        <li className="mr-4">
+                        <li key={key} className="mr-4">
                           <a
                             className="relative inline-flex items-center text-sm font-medium text-slate-400 hover:text-teal-600"
                             href={product.href}
