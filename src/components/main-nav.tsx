@@ -1,7 +1,7 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 export function MainNav({
   className,
@@ -11,11 +11,12 @@ export function MainNav({
 
   return (
     <nav
-      className={cn("flex items-center space-x-4 lg:space-x-6", className)}
+      className={cn('flex items-center space-x-4 lg:space-x-6', className)}
       {...props}
     >
-      <LinkItem href="/home" currentRoute={pathName} name="Home" />
-      <LinkItem href="/samples" currentRoute={pathName} name="Samples" />
+      <LinkItem href="/about" currentRoute={pathName} name="about" />
+      <LinkItem href="/projects" currentRoute={pathName} name="projects" />
+      <LinkItem href="/contact" currentRoute={pathName} name="contact" />
     </nav>
   );
 }
@@ -26,8 +27,8 @@ function LinkItem(props: any) {
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium text-muted-foreground transition-colors hover:text-primary",
-        currentRoute == href ? "text-primary" : ""
+        'text-sm font-medium text-muted-foreground transition-colors hover:text-primary',
+        currentRoute == href ? 'text-primary' : '',
       )}
     >
       {name}

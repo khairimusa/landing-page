@@ -4,7 +4,7 @@ import { UserNav } from './user-nav';
 
 export default function Header() {
   return (
-    <div className="border-b-4">
+    <div className="border-b">
       <div className="flex h-16 items-center px-4">
         <UserNav />
         <MainNav className="mx-6" />

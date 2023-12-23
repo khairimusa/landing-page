@@ -28,7 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="block px-2 lg:px-0">
-            <div className="relative mx-auto my-4 max-w-screen-md min-h-[96vh] rounded-xl border-4">
+            <div className="relative mx-auto my-4 max-w-screen-md min-h-[96vh] rounded-md border">
               <Header />
               <section className="mb-16">{children}</section>
               <Footer />
