@@ -16,7 +16,7 @@ export function MainNav({
     >
       <LinkItem href="/about" currentRoute={pathName} name="about" />
       <LinkItem href="/projects" currentRoute={pathName} name="projects" />
-      <LinkItem href="/contact" currentRoute={pathName} name="contact" />
+      <LinkItem href="/work" currentRoute={pathName} name="work" />
     </nav>
   );
 }

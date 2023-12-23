@@ -1,5 +1,9 @@
 import Container from '@/components/Container';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@/components/default/ui/avatar';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -22,8 +26,8 @@ export default function Page() {
           </h2>
           <p className="leading-7 mt-6 text-lg">
             I'm a Software Developer based in Kuala Lumpur, Malaysia. Currently,
-            i work for Capital A (Airasia) . My main focus now is building new
-            features for ikhlas.com for both Web and Mobile Application .
+            i work for Capital A . My main focus now is building new features
+            for ikhlas.com for both Web and Mobile Application .
           </p>
         </div>
       </div>

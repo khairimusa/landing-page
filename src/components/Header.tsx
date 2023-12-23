@@ -1,5 +1,5 @@
 import { MainNav } from './main-nav';
-import { ModeToggle } from './ui/toggle-mode';
+import { ModeToggle } from './default/ui/toggle-mode';
 import { UserNav } from './user-nav';
 
 export default function Header() {
