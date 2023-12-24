@@ -81,7 +81,7 @@ export const mails = [
     subject: 'Appasia Berhad',
     link: 'https://www.appasia.com/',
     text: `Modernized an existing yellopages.my's admin dashboard used by Advertisers. Built UI from Adobe XD mockup to real working screen. Achieving responsive design Achieving responsive design by using css media query. Developed modularized Angular components, to increase in app reusability. Took advantage of SCSS to make styling of the application less repeating. Utilizing PHP Laravel to ease back-end development and migration of databases.`,
-    date: 'July - Feb 2022',
+    date: 'July 2021 - Feb 2022',
     products: [
       {
         title: 'yellowpages.my',
@@ -96,6 +96,7 @@ export const mails = [
     subject: 'Kerry Logistics',
     link: 'https://www.kerrylogistics.com/',
     text: `Involved in Kerry Warehouse Management V3 project for Kerry Logistics. A global focus product that aims to replace the current V2 for all their warehouses around the globe using AWS cloud tech.`,
+    date: 'July 2020 - July 2021',
     products: [
       {
         title: 'Kerry WMS v3',
