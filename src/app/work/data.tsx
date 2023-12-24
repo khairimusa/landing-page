@@ -62,6 +62,9 @@ export const mails = [
     labels: [
       'React',
       'React Native',
+      'NodeJS',
+      'LoopbackJS',
+      'MongoDB',
       'Unity AR',
       'C#',
       'AWS Lambda',

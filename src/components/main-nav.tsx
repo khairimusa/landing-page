@@ -27,7 +27,7 @@ function LinkItem(props: any) {
     <Link
       href={href}
       className={cn(
-        'text-sm font-medium text-muted-foreground transition-colors hover:text-primary',
+        'text-sm font-medium text-muted-foreground transition-colors hover:text-primary hover:scale-125',
         currentRoute == href ? 'text-primary' : '',
       )}
     >

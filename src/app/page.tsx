@@ -4,6 +4,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@/components/default/ui/avatar';
+import { Image } from '@radix-ui/react-avatar';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,21 +14,28 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <Container>
-      <div className="flex flex-row md:flex-col gap-8 items-center justify-between p-4">
+      <div className="min-h-[80vh] flex flex-col md:flex-row gap-8 items-center justify-between px-4 py-20">
         <div className="w-1/4 flex justify-center items-center">
-          <Avatar className="h-32 w-32">
-            <AvatarImage src="/avatars/01.png" alt="avatar" />
-            <AvatarFallback>KM</AvatarFallback>
-          </Avatar>
+          <div className="flex flex-col items-center gap-4">
+            <Avatar className="h-44 w-44 border">
+              <AvatarImage src="/avatars/" alt="avatar" />
+              <AvatarFallback>KM</AvatarFallback>
+            </Avatar>
+          </div>
         </div>
         <div className="w-3/4">
           <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
             Hi, Im Khairi
           </h2>
           <p className="leading-7 mt-6 text-lg">
-            I&apos;m a Software Developer based in Kuala Lumpur, Malaysia.
-            Currently, i work for Capital A . My main focus now is building new
-            features for ikhlas.com for both Web and Mobile Application .
+            Software Developer based in Kuala Lumpur, Malaysia. Currently, i
+            work for Capital A . My main focus now is building new features for
+            ikhlas.com for both Web and Mobile Application .
+          </p>
+          <p className="leading-7 mt-6 text-lg">
+            Previously had worked with multiple projects. From small/medium to
+            large scale enterprise level applications. I enjoy writting front
+            end with React + Next.js and TailwindCSS.
           </p>
         </div>
       </div>
