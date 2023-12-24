@@ -21,14 +21,14 @@ export default function Footer() {
         <a
           className="hover:scale-125"
           target="_blank"
-          href="https://github.com/khairimusa"
+          href="https://www.linkedin.com/in/khairimusa/"
         >
           <LinkedInLogoIcon height={24} width={24} />
         </a>
         <a
           className="hover:scale-125"
           target="_blank"
-          href="https://github.com/khairimusa"
+          href="https://stackoverflow.com/users/7228601/khairi"
         >
           <StackIcon height={24} width={24} />
         </a>

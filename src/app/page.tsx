@@ -18,7 +18,10 @@ export default function Page() {
         <div className="w-1/4 flex justify-center items-center">
           <div className="flex flex-col items-center gap-4">
             <Avatar className="h-44 w-44 border">
-              <AvatarImage src="/avatars/" alt="avatar" />
+              <AvatarImage
+                src="https://raw.githubusercontent.com/khairimusa/landing-page/main/public/profile-removed.png"
+                alt="avatar"
+              />
               <AvatarFallback>KM</AvatarFallback>
             </Avatar>
           </div>
