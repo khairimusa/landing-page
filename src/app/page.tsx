@@ -4,8 +4,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@/components/default/ui/avatar';
-import { Image } from '@radix-ui/react-avatar';
 import { Metadata } from 'next';
+import PdfViewer from '@/custom/PdfViewer';
 
 export const metadata: Metadata = {
   description: 'Example dashboard app built using the components.',
@@ -37,9 +37,13 @@ export default function Page() {
           </p>
           <p className="leading-7 mt-6 text-lg">
             Previously had worked with multiple projects. From small/medium to
-            large scale enterprise level applications. I enjoy writting front
-            end with React + Next.js and TailwindCSS.
+            large scale enterprise level applications. I code front end with
+            React + Next.js and TailwindCSS. For the backend depends on what the
+            project needs.
           </p>
+          <div className="pt-4">
+            <PdfViewer />
+          </div>
         </div>
       </div>
     </Container>
