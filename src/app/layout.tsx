@@ -5,9 +5,10 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import Header from '@/components-custom/Header';
 import Footer from '@/components-custom/Footer';
+
 export const metadata: Metadata = {
-  title: 'Kai Next Template',
-  description: 'kairi next js blank template',
+  title: 'Khairi',
+  description: 'Software Engineer Portfolio',
 };
 
 export default function RootLayout({

@@ -1,18 +1,17 @@
 'use client';
 import * as React from 'react';
-import { MailList } from '@/app/work/components/mail-list';
+import { ExperienceList } from '@/app/work/components/experience-list';
 import { Separator } from '@/components/new-york/ui/separator';
-import { Tabs } from '@/components/new-york/ui/tabs';
 import { TooltipProvider } from '@/components/new-york/ui/tooltip';
-import { mails } from '../data';
+import { experiences } from '../data';
 
-type Mail = (typeof mails)[number];
+type Experience = (typeof experiences)[number];
 
-interface MailProps {
-  mails: Mail[];
+interface ExperienceProps {
+  experiences: Experience[];
 }
 
-export function Mail({ mails }: MailProps) {
+export function Experience({ experiences }: ExperienceProps) {
   return (
     <TooltipProvider delayDuration={0}>
       <div className="">
@@ -20,7 +19,7 @@ export function Mail({ mails }: MailProps) {
           <h1 className="text-xl font-bold">Experience</h1>
         </div>
         <Separator />
-        <MailList items={mails} />
+        <ExperienceList items={experiences} />
       </div>
     </TooltipProvider>
   );

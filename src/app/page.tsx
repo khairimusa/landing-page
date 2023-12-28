@@ -6,7 +6,6 @@ import {
 } from '@/components/default/ui/avatar';
 import { Metadata } from 'next';
 import PdfViewer from '@/components-custom/PdfViewer';
-import DrawerDemo from '@/components/default/example/drawer-demo';
 
 export const metadata: Metadata = {
   description: 'Example dashboard app built using the components.',

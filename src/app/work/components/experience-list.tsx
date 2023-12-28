@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/new-york/ui/badge';
 import { ScrollArea } from '@/components/new-york/ui/scroll-area';
-import { MailType } from '@/app/work/data';
+import { ExperienceType } from '@/app/work/data';
 
-interface MailListProps {
-  items: MailType[];
+interface ExperienceListProps {
+  items: ExperienceType[];
 }
 
-export function MailList({ items }: MailListProps) {
+export function ExperienceList({ items }: ExperienceListProps) {
   return (
     <ScrollArea className="h-auto">
       <div className="flex flex-col gap-4 p-4">
@@ -38,7 +38,7 @@ export function MailList({ items }: MailListProps) {
                         <span>
                           {item.name} ·{' '}
                           <span className="inline-block">
-                            {item.subject}
+                            {item.company}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 5 20 20"
@@ -59,7 +59,7 @@ export function MailList({ items }: MailListProps) {
                   </h3>
                 </div>
                 <div className="text-md text-slate-500 dark:text-slate-300">
-                  {item.text}
+                  {item.description}
                 </div>
                 <div>
                   {item.products.length ? (
