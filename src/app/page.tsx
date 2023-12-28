@@ -36,7 +36,7 @@ export default function Page() {
             ikhlas.com for both Web and Mobile Application .
           </p>
           <p className="leading-7 mt-6 text-lg">
-            Previously had worked on multiple projects. From small/medium to
+            Previously, I had worked on multiple projects. From small/medium to
             large scale enterprise level applications. I do front end with React
             + Next.js and TailwindCSS. For the backend its usually a mixtures of
             few different things.
