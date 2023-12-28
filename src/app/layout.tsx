@@ -28,7 +28,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <link rel="stylesheet" href="./globals.css" />
           <main className="block px-2 lg:px-0">
             <div className="relative mx-auto my-4 max-w-screen-md min-h-[96vh] rounded-md border shadow-2xl">
               <Header />
