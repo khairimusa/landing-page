@@ -34,6 +34,7 @@ export function ExperienceList({ items }: ExperienceListProps) {
                         href={item.link}
                         target="_blank"
                         rel="noreferrer noopener"
+                        aria-label="Visit company website"
                       >
                         <span>
                           {item.name} ·{' '}
@@ -71,6 +72,7 @@ export function ExperienceList({ items }: ExperienceListProps) {
                             href={product.href}
                             target="_blank"
                             rel="noreferrer"
+                            aria-label="Visit product website"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"

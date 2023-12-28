@@ -16,6 +16,7 @@ export default function Footer() {
           target="_blank"
           href="https://github.com/khairimusa"
           rel="noreferrer noopener"
+          aria-label="GitHub"
         >
           <GitHubLogoIcon height={24} width={24} />
         </a>
@@ -24,6 +25,7 @@ export default function Footer() {
           target="_blank"
           href="https://www.linkedin.com/in/khairimusa/"
           rel="noreferrer noopener"
+          aria-label="LinkedIn"
         >
           <LinkedInLogoIcon height={24} width={24} />
         </a>
@@ -32,6 +34,7 @@ export default function Footer() {
           target="_blank"
           href="https://stackoverflow.com/users/7228601/khairi"
           rel="noreferrer noopener"
+          aria-label="Stack Overflow"
         >
           <StackIcon height={24} width={24} />
         </a>
