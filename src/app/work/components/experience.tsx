@@ -14,13 +14,11 @@ interface ExperienceProps {
 export function Experience({ experiences }: ExperienceProps) {
   return (
     <TooltipProvider delayDuration={0}>
-      <div className="">
-        <div className="flex items-center px-4 py-2">
-          <h1 className="text-xl font-bold">Experience</h1>
-        </div>
-        <Separator />
-        <ExperienceList items={experiences} />
+      <div className="flex items-center px-4 py-2">
+        <h1 className="text-xl font-bold">Experience</h1>
       </div>
+      <Separator />
+      <ExperienceList items={experiences} />
     </TooltipProvider>
   );
 }

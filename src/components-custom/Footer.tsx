@@ -15,6 +15,7 @@ export default function Footer() {
           className="hover:scale-125"
           target="_blank"
           href="https://github.com/khairimusa"
+          rel="noreferrer noopener"
         >
           <GitHubLogoIcon height={24} width={24} />
         </a>
@@ -22,6 +23,7 @@ export default function Footer() {
           className="hover:scale-125"
           target="_blank"
           href="https://www.linkedin.com/in/khairimusa/"
+          rel="noreferrer noopener"
         >
           <LinkedInLogoIcon height={24} width={24} />
         </a>
@@ -29,6 +31,7 @@ export default function Footer() {
           className="hover:scale-125"
           target="_blank"
           href="https://stackoverflow.com/users/7228601/khairi"
+          rel="noreferrer noopener"
         >
           <StackIcon height={24} width={24} />
         </a>
