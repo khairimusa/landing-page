@@ -1,13 +1,13 @@
 import { atom, useAtom } from 'jotai';
 
-import { MailType, mails } from '@/app/work/data';
+import { ExperienceType, experiences } from '@/app/work/data';
 
 type Config = {
-  selected: MailType['id'] | null;
+  selected: ExperienceType['id'] | null;
 };
 
 const configAtom = atom<Config>({
-  selected: mails[0].id,
+  selected: experiences[0].id,
 });
 
 export function useMail() {
