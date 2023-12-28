@@ -14,8 +14,8 @@ export function MainNav({
       className={cn('flex items-center space-x-4 lg:space-x-6', className)}
       {...props}
     >
-      <LinkItem href="/about" currentRoute={pathName} name="about" />
-      <LinkItem href="/projects" currentRoute={pathName} name="projects" />
+      {/* <LinkItem href="/about" currentRoute={pathName} name="about" />
+      <LinkItem href="/projects" currentRoute={pathName} name="projects" /> */}
       <LinkItem href="/work" currentRoute={pathName} name="work" />
     </nav>
   );
