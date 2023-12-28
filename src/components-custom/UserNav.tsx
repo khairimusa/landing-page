@@ -14,7 +14,7 @@ export function UserNav() {
         className="relative h-8 w-8 rounded-full hover:scale-125"
       >
         <Avatar className="h-8 w-8">
-          <AvatarImage src="/avatars/01.png" alt="avatar" />
+          <AvatarImage alt="avatar" />
           <AvatarFallback>KM</AvatarFallback>
         </Avatar>
       </Button>

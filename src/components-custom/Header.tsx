@@ -1,10 +1,10 @@
-import { MainNav } from './main-nav';
+import { MainNav } from './MainNav';
 import { ModeToggle } from '@/components/default/ui/toggle-mode';
-import { UserNav } from './user-nav';
+import { UserNav } from './UserNav';
 
 export default function Header() {
   return (
-    <div className="border-b">
+    <nav className="border-b">
       <div className="flex h-16 items-center px-4">
         <UserNav />
         <MainNav className="mx-6" />
@@ -12,6 +12,6 @@ export default function Header() {
           <ModeToggle />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

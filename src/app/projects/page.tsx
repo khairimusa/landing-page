@@ -1,4 +1,4 @@
-import Container from '@/components/Container';
+import Container from '@/components-custom/Container';
 
 export default function Projects() {
   return (
