@@ -28,7 +28,7 @@ export default function Page() {
         </div>
         <div className="w-3/4">
           <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-            Hi, Im Khairi
+            Hi, Im Khairi 👋
           </h2>
           <p className="leading-7 mt-6 text-lg">
             Software Developer based in Kuala Lumpur , Malaysia. Currently, i
