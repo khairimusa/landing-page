@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/',
+  basePath: '/landing-page',
   async redirects() {
     return [
       {
