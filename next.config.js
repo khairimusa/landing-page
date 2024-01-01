@@ -1,23 +1,14 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/landing-page',
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/',
-        basePath: false,
-        permanent: false,
-        statusCode: 301,
-      },
-    ];
-  },
-  reactStrictMode: true,
-  trailingSlash: true,
-  swcMinify: true,
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com/khairimusa',
+      },
+    ],
+  },
+  experimental: {
+    serverActions: true,
   },
 };
 
