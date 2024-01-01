@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/landing-page',
+  basePath: '/',
   async redirects() {
     return [
       {
         source: '/',
-        destination: '/landing-page',
+        destination: '/',
         basePath: false,
         permanent: false,
         statusCode: 301,
