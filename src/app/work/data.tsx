@@ -4,7 +4,7 @@ export const experiences = [
     name: 'Software Engineer',
     company: 'Airasia Berhad',
     link: 'https://www.capitala.com',
-    description: `Lead the blog initiatives. Increased users' time retention by 8%. Integrated webhooks from client's ERP system to automate email sending on each status changes.`,
+    description: `Lead the blog initiatives. Increased users' time retention by 8%. Increased upselling & crossselling of products within ikhlas.com.`,
     date: 'Dec 2022 - Present',
     products: [
       {
@@ -40,7 +40,7 @@ export const experiences = [
     company: 'Dex Labs Sdn Bhd',
     link: 'https://www.dex-labs.com/',
     description: `
-    Leveraging company's in house React component library to build client's web and mobile apps. Integrated SNYK Open Source into a payment gateway project's deployment pipeline for a vulnerability scanning to make sure it met the PCI DSS certification. Developed, Test & Managed the release of a Unity AR mobile application on Apple App Store, Google Play Store & Huawei App Gallery. Make sure that the application is free of bugs and performant across low to high end mobile devices. Ohsem! AR now has over 500+ downloads and a 4.5+ star rating across 3 app stores.
+    Used in-house React components for client web and mobile apps. Integrated SNYK Open Source for PCI DSS compliance in a payment gateway project. Managed development, testing, and release of Unity AR app on major app stores. Achieved 500+ downloads with a 4.5+ star rating across Apple App Store, Google Play Store, and Huawei App Gallery for Ohsem! AR.
     `,
     date: 'Feb - Dec 2022',
     products: [
@@ -80,7 +80,7 @@ export const experiences = [
     name: 'Web Application Developer',
     company: 'Appasia Berhad',
     link: 'https://www.appasia.com/',
-    description: `Modernized an existing yellopages.my's admin dashboard used by Advertisers. Built UI from Adobe XD mockup to real working screen. Achieving responsive design Achieving responsive design by using css media query. Developed modularized Angular components, to increase in app reusability. Took advantage of SCSS to make styling of the application less repeating. Utilizing PHP Laravel to ease back-end development and migration of databases.`,
+    description: `Revamped yellopages.my's Advertisers admin dashboard, translating Adobe XD mockups into responsive UI through CSS media queries. Enhanced reusability by developing modular Angular components and reduced styling repetition using SCSS. Leveraged PHP Laravel for streamlined backend development and database migration, contributing to a more modern and efficient system.`,
     date: 'July 2021 - Feb 2022',
     products: [
       {
