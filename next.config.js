@@ -1,4 +1,5 @@
 const nextConfig = {
+  output: 'export',
   images: {
     remotePatterns: [
       {
@@ -6,9 +7,7 @@ const nextConfig = {
         hostname: 'raw.githubusercontent.com/khairimusa',
       },
     ],
-  },
-  experimental: {
-    serverActions: true,
+    unoptimized: true,
   },
 };
 

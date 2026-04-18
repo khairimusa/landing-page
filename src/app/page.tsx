@@ -3,9 +3,9 @@ const experiences = [
     name: 'Software Engineer',
     company: 'K3 Advisory Group',
     link: '#',
-    desc: "Building Aimee, a company-wide AI assistant that lets employees talk to their entire Microsoft 365 workspace in plain English. Pulls live data from Outlook, SharePoint, Teams, and the org chart via Microsoft Graph; analyses uploaded files (PDFs, Word, spreadsheets); supports branching conversations, smart mode detection between internal and public search, streamed responses, one-click export to Google Sheets, and per-user usage controls with admin audit logs. Auth is Azure Entra ID with an On-Behalf-Of token flow so MS 365 data is fetched server-side without stored secrets.",
+    desc: "Building Internal AI Chat Bot, a company-wide AI assistant that lets employees talk to their entire Microsoft 365 workspace in plain English. Pulls live data from Outlook, SharePoint, Teams, and the org chart via Microsoft Graph; analyses uploaded files (PDFs, Word, spreadsheets); supports branching conversations, smart mode detection between internal and public search, streamed responses, one-click export to Google Sheets, and per-user usage controls with admin audit logs. Auth is Azure Entra ID with an On-Behalf-Of token flow so MS 365 data is fetched server-side without stored secrets.",
     date: 'Dec 2025 - Present',
-    products: [{ t: 'Aimee', h: 'https://aimee-dev.k3advisorygroup.com/' }],
+    products: [],
     tags: ['Next.js', 'TypeScript', 'Azure Postgres', 'Azure App Service', 'MS Graph', 'Entra ID', 'Tailwind', 'shadcn/ui'],
   },
   {
@@ -128,7 +128,7 @@ export default function Page() {
             <span>Available · Kuala Lumpur, MY</span>
           </div>
           <h1 className="name">
-            Hi, I&apos;m Khairi - I build software for businesses that actually use it<span className="accent">.</span>
+            Hi, I&apos;m Khairi<span className="accent">.</span>
           </h1>
           <p className="lede">
             Software Engineer at <a href="#">K3 Advisory Group</a>, building an internal AI chat that consolidates every
