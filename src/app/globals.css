@@ -94,6 +94,12 @@ a { color: inherit; text-decoration: none; }
 .nav-link:hover { color: var(--fg); background: var(--bg-hover); }
 .nav-link.active { color: var(--fg); }
 
+@media (max-width: 560px) {
+  .brand-sep,
+  .brand-role { display: none; }
+  .nav-link { padding: 0.4rem 0.45rem; font-size: 0.8rem; }
+}
+
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
   padding: var(--pad-y) 0 calc(var(--pad-y) * 0.6);
