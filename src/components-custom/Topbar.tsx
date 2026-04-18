@@ -31,7 +31,6 @@ export default function Topbar() {
     <header className="topbar">
       <div className="shell topbar-inner">
         <a href="#" className="brand" aria-label="Khairi home">
-          <span className="brand-dot" />
           <span className="brand-name">Khairi M.</span>
           <span className="brand-sep">/</span>
           <span className="brand-role">Fullstack Engineer</span>

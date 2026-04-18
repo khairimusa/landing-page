@@ -56,10 +56,10 @@ const experiences = [
     name: 'Junior Software Engineer',
     company: 'Kerry Network Limited',
     link: 'https://www.kerrylogistics.com/',
-    desc: 'Built responsive interfaces with Angular 8+, used AWS (EC2, Lambda, S3, CloudFront, Redis), and managed Postgres/MSSQL/Oracle DBs. Provisioned infra with Terraform and contributed across cross-functional feature design.',
+    desc: 'Built responsive interfaces with Angular 8+, used AWS (EC2, Lambda, S3, CloudFront, Redis), and managed Postgres/MSSQL/Oracle DBs.',
     date: 'Jul 2020 - Jul 2021',
     products: [{ t: 'Kerry WMS v3', h: '#' }],
-    tags: ['Angular', 'AWS', 'Terraform', 'PostgreSQL', 'MSSQL', 'Oracle'],
+    tags: ['Angular', 'AWS', 'PostgreSQL', 'MSSQL', 'Oracle'],
   },
 ];
 
@@ -124,8 +124,7 @@ export default function Page() {
         </div>
         <div>
           <div className="status">
-            <span className="status-dot" />
-            <span>Available · Kuala Lumpur, MY</span>
+            <span>Kuala Lumpur, MY</span>
           </div>
           <h1 className="name">
             Hi, I&apos;m Khairi<span className="accent">.</span>
@@ -241,28 +240,24 @@ export default function Page() {
             <div className="stack-label">Frontend</div>
             <div className="stack-content">
               React, Next.js, Angular 8+, TypeScript{' '}
-              <span className="dim">- Tailwind for styling, Micro Frontend when scale demands it.</span>
             </div>
           </div>
           <div className="stack-cell">
             <div className="stack-label">Backend</div>
             <div className="stack-content">
               C#, .NET Web API, Node.js, Go, PHP{' '}
-              <span className="dim">- GraphQL with Hasura when speed matters.</span>
             </div>
           </div>
           <div className="stack-cell">
             <div className="stack-label">Data</div>
             <div className="stack-content">
               MSSQL, PostgreSQL, MongoDB{' '}
-              <span className="dim">- Elasticsearch, Redis, RabbitMQ for everything around it.</span>
             </div>
           </div>
           <div className="stack-cell">
             <div className="stack-label">Cloud / Infra</div>
             <div className="stack-content">
-              AWS, GCP, Vercel{' '}
-              <span className="dim">- Docker, Portainer, Terraform; Firebase when it fits.</span>
+              AWS, GCP, Azure, Vercel{' '}
             </div>
           </div>
         </div>
