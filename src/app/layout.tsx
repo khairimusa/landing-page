@@ -5,8 +5,24 @@ import './globals.css';
 import Topbar from '@/components-custom/Topbar';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://khaairi.com'),
   title: 'Khairi - Software Developer',
   description: 'Software Engineer based in Kuala Lumpur, Malaysia.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Khairi - Software Developer',
+    description: 'Software Engineer based in Kuala Lumpur, Malaysia.',
+    url: 'https://khaairi.com',
+    siteName: 'khaairi.com',
+    type: 'website',
+    images: [{ url: '/profile-removed.webp', alt: 'Khairi Musa' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Khairi - Software Developer',
+    description: 'Software Engineer based in Kuala Lumpur, Malaysia.',
+    images: ['/profile-removed.webp'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
