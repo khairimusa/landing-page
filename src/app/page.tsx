@@ -117,10 +117,7 @@ export default function Page() {
       {/* Hero */}
       <section className="hero">
         <div className="avatar">
-          <img
-            src="https://raw.githubusercontent.com/khairimusa/landing-page/main/public/profile-removed.webp"
-            alt="Khairi Musa"
-          />
+          <img src="/profile-removed.webp" alt="Khairi Musa" />
         </div>
         <div>
           <div className="status">
