@@ -123,6 +123,12 @@ a:focus-visible, .btn:focus-visible {
   .nav-link { padding: 0.4rem 0.4rem; font-size: 0.8rem; }
 }
 
+@media (max-width: 560px) {
+  .brand-sep,
+  .brand-role { display: none; }
+  .nav-link { padding: 0.4rem 0.45rem; font-size: 0.8rem; }
+}
+
 /* ── Hero ──────────────────────────────────────────────────── */
 .hero {
   padding: var(--pad-y) 0 calc(var(--pad-y) * 0.75);
