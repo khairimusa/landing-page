@@ -121,12 +121,40 @@ const awards = [
   },
 ];
 
-const stack = [
+const azureServices = [
+  'App Service + WebJobs',
+  'Database for PostgreSQL (Flexible Server)',
+  'Blob Storage',
+  'Container Apps dynamic sessions',
+  'AI Document Intelligence',
+  'Microsoft Entra ID + managed identity',
+  'Logic Apps',
+  'Application Insights / Azure Monitor',
+  'Azure Pipelines (Azure DevOps)',
+];
+
+const stack: { label: string; items: React.ReactNode }[] = [
   { label: 'AI / Security', items: 'OpenRouter, Vercel AI SDK (multi-step tool-calling agent loop), MCP, RAG (pgvector), LLM evals, Langfuse, zero data retention (ZDR), sandboxed code execution, Entra ID (OBO), row-level security' },
   { label: 'Frontend', items: 'React, Next.js, TypeScript, Micro Frontends, Angular 8+' },
   { label: 'Backend', items: 'C#, .NET Web API, Node.js, Go, PHP' },
   { label: 'Data', items: 'PostgreSQL, pgvector, Drizzle, MSSQL, MongoDB' },
-  { label: 'Cloud / Infra', items: 'Azure, AWS, GCP, Vercel' },
+  {
+    label: 'Cloud / Infra',
+    items: (
+      <>
+        <span className="tip" tabIndex={0} aria-describedby="azure-services">
+          Azure
+          <span className="tip-box" role="tooltip" id="azure-services">
+            <span className="tip-title">Azure services</span>
+            {azureServices.map(name => (
+              <span key={name} className="tip-item">{name}</span>
+            ))}
+          </span>
+        </span>
+        , AWS, GCP, Vercel
+      </>
+    ),
+  },
 ];
 
 const ArrowIcon = () => (

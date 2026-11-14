@@ -357,7 +357,6 @@ a.xp-product:hover { color: var(--accent); }
 .stack {
   border: 1px solid var(--border);
   border-radius: 10px;
-  overflow: hidden;
   background: color-mix(in oklab, var(--bg-elev) 50%, transparent);
 }
 .stack .spec-row { padding: 0.9rem 1.2rem; font-size: 0.9rem; }
@@ -418,3 +417,44 @@ footer.site-footer a:hover { color: var(--fg); }
   .hero > * { animation: none; }
   * { transition: none !important; }
 }
+
+/* ── Tooltip ──────────────────────────────────────────────── */
+.tip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dashed var(--accent-dim);
+}
+.tip:hover, .tip:focus-visible { color: var(--accent); }
+.tip-box {
+  position: absolute;
+  left: 0; bottom: calc(100% + 10px);
+  z-index: 10;
+  width: max-content;
+  max-width: min(320px, 78vw);
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--bg-elev);
+  box-shadow: 0 12px 30px -12px oklch(0 0 0 / 0.7);
+  color: var(--fg);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  cursor: default;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity .15s ease, transform .15s ease, visibility .15s;
+}
+.tip:hover .tip-box, .tip:focus .tip-box, .tip:focus-within .tip-box {
+  opacity: 1; visibility: visible; transform: none;
+}
+.tip-title {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-dim);
+  margin-bottom: 0.15rem;
+}
+.tip-item { color: var(--fg-muted); }
