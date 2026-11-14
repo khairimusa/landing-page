@@ -2,7 +2,6 @@ type Experience = {
   name: string;
   company: string;
   link: string;
-  focus?: string;
   desc: string;
   points?: string[];
   date: string;
@@ -15,8 +14,7 @@ const experiences: Experience[] = [
     name: 'Software Engineer',
     company: 'K3 Advisory Group',
     link: '#',
-    focus: 'Secure AI',
-    desc: 'I build Aimee, the internal AI assistant of the company. Staff upload NDAs and other sensitive documents, so data protection comes first.',
+    desc: 'I build the internal AI assistant of the company. Staff upload NDAs and other sensitive documents, so data protection comes first.',
     points: [
       'Hosted on Azure in the EU to comply with EU data residency.',
       'Zero data retention (ZDR) compliant.',
@@ -32,8 +30,7 @@ const experiences: Experience[] = [
     name: 'Dev Services Consultant - Fullstack',
     company: 'The Access Group UK',
     link: 'https://www.theaccessgroup.com/',
-    focus: 'Forward-deployed engineering',
-    desc: 'I worked directly with client teams in the UK and APAC (NZ/AU). I used AI to build fullstack web app integrations that extend the ERP system to new use cases.',
+    desc: 'I worked directly with client teams in the UK and APAC (NZ/AU), from requirements to delivery. I used AI to build fullstack web app integrations that extend the ERP system to new use cases.',
     points: [
       'Custom React + TypeScript micro frontends for specific ERP use cases.',
       '.NET Web APIs, webhook integrations, and background services.',
@@ -128,15 +125,6 @@ const stack = [
   { label: 'Cloud / Infra', items: 'Azure, AWS, GCP, Vercel' },
 ];
 
-const aimeeSpec = [
-  { k: 'Hosting', v: 'Azure, EU region' },
-  { k: 'Data residency', v: 'EU' },
-  { k: 'Data retention', v: 'Zero data retention (ZDR)' },
-  { k: 'Sign-in', v: 'Azure Entra ID, On-Behalf-Of token flow' },
-  { k: 'Controls', v: 'Per-user usage limits, admin audit logs' },
-  { k: 'Used for', v: 'NDAs and other sensitive documents' },
-];
-
 const ArrowIcon = () => (
   <svg
     className="xp-arrow"
@@ -170,21 +158,21 @@ export default function Page() {
           </div>
         </div>
         <h1 className="headline">
-          I build <em>secure AI</em> for companies.
+          I build secure AI for companies.
         </h1>
         <div>
           <p className="lede">
-            Software Engineer at <strong>K3 Advisory Group</strong>. I build <strong>Aimee</strong>, an internal AI
-            assistant for sensitive documents such as NDAs. Aimee runs on Azure in the EU, complies with EU data
-            residency, and is zero data retention (ZDR) compliant.
+            Software Engineer at <strong>K3 Advisory Group</strong>. I build an internal AI assistant for
+            sensitive documents such as NDAs. The assistant runs on Azure in the EU, complies with EU data residency,
+            and is zero data retention (ZDR) compliant.
           </p>
           <p className="lede">
             Before that, I was a consultant at{' '}
             <a href="https://www.theaccessgroup.com/" target="_blank" rel="noopener">
               The Access Group UK
-            </a>{' '}
-            in a forward-deployed engineering role. I used AI to build fullstack web apps and custom micro frontends
-            that extend the ERP system for clients.
+            </a>
+            . I worked directly with client teams and used AI to build fullstack web apps and custom micro frontends
+            that extend the ERP system for their use cases.
           </p>
         </div>
         <div>
@@ -207,20 +195,6 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="panel">
-          <div className="panel-head">
-            <span className="panel-title">Aimee</span>
-            <span>Internal AI assistant · K3 Advisory Group</span>
-          </div>
-          <dl className="spec">
-            {aimeeSpec.map(row => (
-              <div key={row.k} className="spec-row">
-                <dt>{row.k}</dt>
-                <dd>{row.v}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
       </section>
 
       {/* Work */}
@@ -234,7 +208,6 @@ export default function Page() {
             <div key={i} className="xp-item">
               <div className="xp-date">{xp.date}</div>
               <div>
-                {xp.focus && <div className="xp-focus">{xp.focus}</div>}
                 <div className="xp-title">
                   <span>{xp.name}</span>
                   <span className="sep">·</span>
