@@ -153,13 +153,10 @@ export default function Page() {
             <img src="/profile-removed.webp" alt="Khairi Musa" />
           </div>
           <div>
-            <div className="ident-name">Khairi Musa</div>
+            <h1 className="ident-name">Khairi Musa</h1>
             <div className="ident-meta">Software Engineer · Kuala Lumpur, MY</div>
           </div>
         </div>
-        <h1 className="headline">
-          I build secure AI for companies.
-        </h1>
         <div>
           <p className="lede">
             Software Engineer at <strong>K3 Advisory Group</strong>. I build an internal AI assistant for

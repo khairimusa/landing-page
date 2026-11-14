@@ -144,14 +144,6 @@ a:focus-visible, .btn:focus-visible {
   color: var(--fg-dim);
 }
 
-h1.headline {
-  font-size: clamp(1.9rem, 4.6vw, 2.6rem);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
-}
-
 .lede {
   color: var(--fg-muted);
   font-size: 1.04rem;
