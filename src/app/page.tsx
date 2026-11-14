@@ -1,21 +1,48 @@
-const experiences = [
+type Experience = {
+  name: string;
+  company: string;
+  link: string;
+  focus?: string;
+  desc: string;
+  points?: string[];
+  date: string;
+  products: { t: string; h: string }[];
+  tags: string[];
+};
+
+const experiences: Experience[] = [
   {
     name: 'Software Engineer',
     company: 'K3 Advisory Group',
     link: '#',
-    desc: "Building Internal AI Chat Bot, a company-wide AI assistant that lets employees talk to their entire Microsoft 365 workspace in plain English. Pulls live data from Outlook, SharePoint, Teams, and the org chart via Microsoft Graph; analyses uploaded files (PDFs, Word, spreadsheets); supports branching conversations, smart mode detection between internal and public search, streamed responses, one-click export to Google Sheets, and per-user usage controls with admin audit logs. Auth is Azure Entra ID with an On-Behalf-Of token flow so MS 365 data is fetched server-side without stored secrets.",
+    focus: 'Secure AI',
+    desc: 'I build Aimee, the internal AI assistant of the company. Staff upload NDAs and other sensitive documents, so data protection comes first.',
+    points: [
+      'Hosted on Azure in the EU to comply with EU data residency.',
+      'Zero data retention (ZDR) compliant.',
+      'Sign-in with Azure Entra ID. An On-Behalf-Of token flow gets Microsoft 365 data through Microsoft Graph on the server, with no stored secrets.',
+      'Per-user usage controls and admin audit logs.',
+      'File analysis (PDF, Word, spreadsheets), streamed responses, and branching conversations.',
+    ],
     date: 'Dec 2025 - Present',
     products: [],
-    tags: ['Next.js', 'TypeScript', 'Azure Postgres', 'Azure App Service', 'MS Graph', 'Entra ID', 'Tailwind', 'shadcn/ui'],
+    tags: ['Next.js', 'TypeScript', 'Azure (EU)', 'Entra ID', 'MS Graph', 'Azure Postgres', 'Azure App Service', 'Tailwind', 'shadcn/ui'],
   },
   {
     name: 'Dev Services Consultant - Fullstack',
     company: 'The Access Group UK',
     link: 'https://www.theaccessgroup.com/',
-    desc: 'Built bespoke integrations across APAC (NZ/AU) and UK clients - Webhook integrations, Web APIs, background services, and React + TypeScript Micro Frontend widgets. Drove £17,850 ARR within four months from billable client work, and shipped a React BACS payment-approval app that cut admin effort by 70% across hundreds of ERP databases.',
+    focus: 'Forward-deployed engineering',
+    desc: 'I worked directly with client teams in the UK and APAC (NZ/AU). I used AI to build fullstack web app integrations that extend the ERP system to new use cases.',
+    points: [
+      'Custom React + TypeScript micro frontends for specific ERP use cases.',
+      '.NET Web APIs, webhook integrations, and background services.',
+      'A React BACS payment-approval app that cut admin effort by 70% across hundreds of ERP databases.',
+      '£17,850 ARR from billable client work within four months.',
+    ],
     date: 'Dec 2024 - Dec 2025',
     products: [{ t: 'Belgian e-Invoicing (Peppol/Ecosio)', h: '#' }],
-    tags: ['React', 'TypeScript', 'C#', '.NET Web API', 'MSSQL', 'Crystal Reports', 'Peppol', 'Micro Frontend'],
+    tags: ['React', 'TypeScript', 'Micro Frontend', 'C#', '.NET Web API', 'MSSQL', 'Crystal Reports', 'Peppol'],
   },
   {
     name: 'Software Engineer',
@@ -93,6 +120,23 @@ const awards = [
   },
 ];
 
+const stack = [
+  { label: 'AI / Security', items: 'LLM integration, zero data retention (ZDR), EU data residency, Entra ID (OBO), audit logs' },
+  { label: 'Frontend', items: 'React, Next.js, TypeScript, Micro Frontends, Angular 8+' },
+  { label: 'Backend', items: 'C#, .NET Web API, Node.js, Go, PHP' },
+  { label: 'Data', items: 'PostgreSQL, MSSQL, MongoDB' },
+  { label: 'Cloud / Infra', items: 'Azure, AWS, GCP, Vercel' },
+];
+
+const aimeeSpec = [
+  { k: 'Hosting', v: 'Azure, EU region' },
+  { k: 'Data residency', v: 'EU' },
+  { k: 'Data retention', v: 'Zero data retention (ZDR)' },
+  { k: 'Sign-in', v: 'Azure Entra ID, On-Behalf-Of token flow' },
+  { k: 'Controls', v: 'Per-user usage limits, admin audit logs' },
+  { k: 'Used for', v: 'NDAs and other sensitive documents' },
+];
+
 const ArrowIcon = () => (
   <svg
     className="xp-arrow"
@@ -102,7 +146,7 @@ const ArrowIcon = () => (
     strokeWidth="2.2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    style={{ display: 'inline-block', verticalAlign: 'middle' }}
+    aria-hidden="true"
   >
     <line x1="7" y1="17" x2="17" y2="7" />
     <polyline points="7 7 17 7 17 17" />
@@ -116,28 +160,34 @@ export default function Page() {
     <main className="shell" id="root">
       {/* Hero */}
       <section className="hero">
-        <div className="avatar">
-          <img src="/profile-removed.webp" alt="Khairi Musa" />
-        </div>
-        <div>
-          <div className="status">
-            <span>Kuala Lumpur, MY</span>
+        <div className="ident">
+          <div className="avatar">
+            <img src="/profile-removed.webp" alt="Khairi Musa" />
           </div>
-          <h1 className="name">
-            Hi, I&apos;m Khairi<span className="accent">.</span>
-          </h1>
+          <div>
+            <div className="ident-name">Khairi Musa</div>
+            <div className="ident-meta">Software Engineer · Kuala Lumpur, MY</div>
+          </div>
+        </div>
+        <h1 className="headline">
+          I build <em>secure AI</em> for companies.
+        </h1>
+        <div>
           <p className="lede">
-            Software Engineer at <a href="#">K3 Advisory Group</a>, building an internal AI chat that consolidates every
-            frontier model in one place and plugs into Microsoft Graph so people can act on their MS 365 data from inside
-            the conversation.
+            Software Engineer at <strong>K3 Advisory Group</strong>. I build <strong>Aimee</strong>, an internal AI
+            assistant for sensitive documents such as NDAs. Aimee runs on Azure in the EU, complies with EU data
+            residency, and is zero data retention (ZDR) compliant.
           </p>
           <p className="lede">
-            Previously shipped ERP integrations and React Micro Frontends at{' '}
+            Before that, I was a consultant at{' '}
             <a href="https://www.theaccessgroup.com/" target="_blank" rel="noopener">
               The Access Group UK
-            </a>
-            .
+            </a>{' '}
+            in a forward-deployed engineering role. I used AI to build fullstack web apps and custom micro frontends
+            that extend the ERP system for clients.
           </p>
+        </div>
+        <div>
           <div className="hero-actions">
             <a href="/cv.pdf" className="btn primary" target="_blank" rel="noopener">
               Download CV
@@ -156,39 +206,71 @@ export default function Page() {
             </a>
           </div>
         </div>
+
+        <div className="panel">
+          <div className="panel-head">
+            <span className="panel-title">Aimee</span>
+            <span>Internal AI assistant · K3 Advisory Group</span>
+          </div>
+          <dl className="spec">
+            {aimeeSpec.map(row => (
+              <div key={row.k} className="spec-row">
+                <dt>{row.k}</dt>
+                <dd>{row.v}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       {/* Work */}
       <section className="block" id="work">
         <div className="section-head">
           <h2>Work</h2>
+          <span className="meta">2020 - present</span>
         </div>
         <div className="xp">
           {experiences.map((xp, i) => (
             <div key={i} className="xp-item">
               <div className="xp-date">{xp.date}</div>
               <div>
+                {xp.focus && <div className="xp-focus">{xp.focus}</div>}
                 <div className="xp-title">
                   <span>{xp.name}</span>
-                  <span style={{ color: 'var(--fg-dim)' }}>·</span>
-                  <a className="company" href={xp.link} target="_blank" rel="noopener">
-                    {xp.company}
-                    <ArrowIcon />
-                  </a>
+                  <span className="sep">·</span>
+                  {xp.link === '#' ? (
+                    <span className="company">{xp.company}</span>
+                  ) : (
+                    <a className="company" href={xp.link} target="_blank" rel="noopener">
+                      {xp.company}
+                      <ArrowIcon />
+                    </a>
+                  )}
                 </div>
                 <p className="xp-desc">{xp.desc}</p>
+                {xp.points && (
+                  <ul className="xp-points">
+                    {xp.points.map((pt, j) => (
+                      <li key={j}>{pt}</li>
+                    ))}
+                  </ul>
+                )}
                 {xp.products.length > 0 && (
                   <div className="xp-products">
-                    {xp.products.map((p, j) => (
-                      <a key={j} className="xp-product" href={p.h} target="_blank" rel="noopener">
-                        {p.t}
-                      </a>
-                    ))}
+                    {xp.products.map((p, j) =>
+                      p.h === '#' ? (
+                        <span key={j} className="xp-product">{p.t}</span>
+                      ) : (
+                        <a key={j} className="xp-product" href={p.h} target="_blank" rel="noopener">
+                          {p.t}
+                        </a>
+                      ),
+                    )}
                   </div>
                 )}
                 <div className="xp-tags">
                   {xp.tags.map((tag, k) => (
-                    <span key={k} className={`tag${k === 0 ? ' accent' : ''}`}>{tag}</span>
+                    <span key={k} className="tag">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -209,15 +291,19 @@ export default function Page() {
               <div className="xp-date">PROJECT</div>
               <div>
                 <div className="xp-title">
-                  <a className="company" href={p.href} target="_blank" rel="noopener" style={{ color: 'var(--fg)' }}>
-                    {p.name}
-                    <ArrowIcon />
-                  </a>
+                  {p.href === '#' ? (
+                    <span>{p.name}</span>
+                  ) : (
+                    <a className="company" href={p.href} target="_blank" rel="noopener" style={{ color: 'var(--fg)' }}>
+                      {p.name}
+                      <ArrowIcon />
+                    </a>
+                  )}
                 </div>
                 <p className="xp-desc">{p.desc}</p>
                 <div className="xp-tags">
                   {p.tags.map((tag, k) => (
-                    <span key={k} className={`tag${k === 0 ? ' accent' : ''}`}>{tag}</span>
+                    <span key={k} className="tag">{tag}</span>
                   ))}
                 </div>
               </div>
@@ -229,35 +315,17 @@ export default function Page() {
       {/* Stack */}
       <section className="block" id="stack">
         <div className="section-head">
-          <h2>Stack - what I reach for</h2>
-          <span className="meta">2026 · subject to change</span>
+          <h2>Stack</h2>
+          <span className="meta">2026</span>
         </div>
-        <div className="stack-grid">
-          <div className="stack-cell">
-            <div className="stack-label">Frontend</div>
-            <div className="stack-content">
-              React, Next.js, Angular 8+, TypeScript{' '}
+        <dl className="stack">
+          {stack.map(row => (
+            <div key={row.label} className="spec-row">
+              <dt>{row.label}</dt>
+              <dd>{row.items}</dd>
             </div>
-          </div>
-          <div className="stack-cell">
-            <div className="stack-label">Backend</div>
-            <div className="stack-content">
-              C#, .NET Web API, Node.js, Go, PHP{' '}
-            </div>
-          </div>
-          <div className="stack-cell">
-            <div className="stack-label">Data</div>
-            <div className="stack-content">
-              MSSQL, PostgreSQL, MongoDB{' '}
-            </div>
-          </div>
-          <div className="stack-cell">
-            <div className="stack-label">Cloud / Infra</div>
-            <div className="stack-content">
-              AWS, GCP, Azure, Vercel{' '}
-            </div>
-          </div>
-        </div>
+          ))}
+        </dl>
       </section>
 
       {/* Awards */}
@@ -268,7 +336,7 @@ export default function Page() {
         </div>
         <div className="xp">
           {awards.map((a, i) => (
-            <div key={i} className="xp-item no-hover" style={{ cursor: 'default' }}>
+            <div key={i} className="xp-item no-hover">
               <div className="xp-date">{a.year}</div>
               <div>
                 <div className="xp-title">

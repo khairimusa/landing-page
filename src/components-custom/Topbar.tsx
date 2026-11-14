@@ -33,7 +33,7 @@ export default function Topbar() {
         <a href="#" className="brand" aria-label="Khairi home">
           <span className="brand-name">Khairi M.</span>
           <span className="brand-sep">/</span>
-          <span className="brand-role">Fullstack Engineer</span>
+          <span className="brand-role">Software Engineer · Secure AI</span>
         </a>
         <nav className="nav-links" aria-label="Primary">
           {(['work', 'projects', 'stack', 'contact'] as const).map(id => (
