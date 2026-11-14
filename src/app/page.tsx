@@ -14,21 +14,21 @@ const experiences: Experience[] = [
     name: 'Software Engineer',
     company: 'K3 Advisory Group',
     link: '#',
-    desc: 'Building an internal AI assistant with chat, document workflows, Microsoft 365 tools, and user-defined skills. Stack: Next.js 15 / React 19 on Azure App Service, App Router route handlers as the backend, Vercel AI SDK v6 for the agent loop, PostgreSQL 16 + pgvector through Drizzle, and Azure Blob Storage.',
+    desc: 'Building a secure and robust internal AI assistant with chat, document workflows, Microsoft 365 tools, and user-defined skills. Stack: Next.js 15 / React 19 on Azure App Service, App Router route handlers as the backend, Vercel AI SDK v6 for the agent loop, PostgreSQL 16 + pgvector through Drizzle, and Azure Blob Storage.',
     points: [
       'Data privacy: zero data retention (ZDR) for all model requests, and EU data residency on Azure.',
       'Identity and access: Microsoft Entra ID single sign-on, role-based access for users and for machine clients, and row-level security in PostgreSQL.',
+      'Sandboxed code execution: code that the model writes runs in isolated Azure Container Apps sessions. Network access is off by default, no credentials enter the sandbox, and a server-side policy checks each run.',
+      'Untrusted content: uploaded files and tool results are data, not instructions, as a defence against prompt injection. Generated HTML is validated against an allowlist and shown in a sandboxed iframe.',
+      'Metadata-only audit logs and telemetry, with no prompts, document text, or credentials. Secret and dependency scans on pull requests.',
       'Long-running chat runs that continue on the server after a browser disconnect.',
-      'Tool integrations: Microsoft 365, RAG on company knowledge, Office document generation, image generation, and web search.',
-      'A headless API with an OpenAPI contract, so other internal systems can use the assistant.',
-      'An automated ingestion pipeline that moves SharePoint documents into the RAG knowledge base.',
-      'An MCP integration with the company data platform for company lookups.',
-      'A usage and cost reporting API for the FinOps team.',
-      'Observability, usage quotas, and LLM evals in CI.',
+      'Integrations: Microsoft 365, RAG with an automated SharePoint ingestion pipeline, Office document generation, web search, and company data through MCP.',
+      'APIs for other internal systems: a headless API with an OpenAPI contract, and a usage and cost reporting API for the FinOps team.',
+      'Per-user usage quotas and LLM evals in CI.',
     ],
     date: 'Dec 2025 - Present',
     products: [],
-    tags: ['Next.js 15', 'React 19', 'TypeScript', 'Vercel AI SDK', 'MCP', 'PostgreSQL', 'pgvector', 'Drizzle', 'Entra ID', 'MS Graph', 'Azure App Service', 'Azure Blob Storage', 'Azure Logic Apps', 'OpenAPI'],
+    tags: ['Next.js 15', 'React 19', 'TypeScript', 'Vercel AI SDK', 'MCP', 'PostgreSQL', 'pgvector', 'Drizzle', 'Entra ID', 'MS Graph', 'Azure App Service', 'Azure Container Apps', 'Azure Blob Storage', 'Azure Logic Apps', 'OpenAPI'],
   },
   {
     name: 'Dev Services Consultant - Fullstack',
@@ -122,7 +122,7 @@ const awards = [
 ];
 
 const stack = [
-  { label: 'AI / Security', items: 'OpenRouter, Vercel AI SDK, MCP, RAG (pgvector), LLM evals, Langfuse, zero data retention (ZDR), EU data residency, Entra ID (OBO), row-level security' },
+  { label: 'AI / Security', items: 'OpenRouter, Vercel AI SDK, MCP, RAG (pgvector), LLM evals, Langfuse, zero data retention (ZDR), EU data residency, sandboxed code execution, Entra ID (OBO), row-level security' },
   { label: 'Frontend', items: 'React, Next.js, TypeScript, Micro Frontends, Angular 8+' },
   { label: 'Backend', items: 'C#, .NET Web API, Node.js, Go, PHP' },
   { label: 'Data', items: 'PostgreSQL, pgvector, Drizzle, MSSQL, MongoDB' },
@@ -163,9 +163,10 @@ export default function Page() {
         </div>
         <div>
           <p className="lede">
-            Software Engineer at <strong>K3 Advisory Group</strong>, building an internal AI assistant: a Next.js and PostgreSQL application on Azure with Entra ID authentication, Microsoft 365
+            Software Engineer at <strong>K3 Advisory Group</strong>, building a secure and robust internal AI assistant: a Next.js and PostgreSQL application on Azure with Entra ID authentication, Microsoft 365
             integration, RAG on pgvector, and a headless API for other internal systems. All model traffic is zero
-            data retention (ZDR), with EU data residency.
+            data retention (ZDR), with EU data residency. Code that the model writes runs in an isolated sandbox with
+            no network access by default.
           </p>
           <p className="lede">
             Before that, I was a consultant at{' '}
