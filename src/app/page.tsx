@@ -122,7 +122,7 @@ const awards = [
 ];
 
 const stack = [
-  { label: 'AI / Security', items: 'OpenRouter, Vercel AI SDK, MCP, RAG (pgvector), LLM evals, Langfuse, zero data retention (ZDR), sandboxed code execution, Entra ID (OBO), row-level security' },
+  { label: 'AI / Security', items: 'OpenRouter, Vercel AI SDK (multi-step tool-calling agent loop), MCP, RAG (pgvector), LLM evals, Langfuse, zero data retention (ZDR), sandboxed code execution, Entra ID (OBO), row-level security' },
   { label: 'Frontend', items: 'React, Next.js, TypeScript, Micro Frontends, Angular 8+' },
   { label: 'Backend', items: 'C#, .NET Web API, Node.js, Go, PHP' },
   { label: 'Data', items: 'PostgreSQL, pgvector, Drizzle, MSSQL, MongoDB' },
