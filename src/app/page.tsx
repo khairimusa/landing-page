@@ -14,7 +14,7 @@ const experiences: Experience[] = [
     name: 'Software Engineer',
     company: 'K3 Advisory Group',
     link: '#',
-    desc: 'Internal AI assistant for NDAs and other sensitive documents. One Next.js 15 / React 19 app on Azure App Service: App Router route handlers as the backend, Vercel AI SDK v6 for the agent loop, PostgreSQL 16 + pgvector through Drizzle, and Azure Blob Storage.',
+    desc: 'The internal AI assistant for all staff of a professional services group: chat, document workflows, Microsoft 365 tools, and user-defined skills. One Next.js 15 / React 19 app on Azure App Service: App Router route handlers as the backend, Vercel AI SDK v6 for the agent loop, PostgreSQL 16 + pgvector through Drizzle, and Azure Blob Storage.',
     points: [
       'Data controls: all model requests go through one provider boundary (OpenRouter) that forces zero data retention (ZDR) and denies data collection. Hosted on Azure in the EU for EU data residency.',
       'Auth: Entra ID with MSAL in the browser, JWT verification and group-based access on the API, and a server-side On-Behalf-Of flow for Microsoft Graph. Machine clients use app-only tokens with app roles. PostgreSQL row-level security scopes all data to its owner.',
@@ -163,9 +163,10 @@ export default function Page() {
         </div>
         <div>
           <p className="lede">
-            Software Engineer at <strong>K3 Advisory Group</strong>. I build an internal AI assistant for
-            sensitive documents such as NDAs. The assistant runs on Azure in the EU, complies with EU data residency,
-            and is zero data retention (ZDR) compliant.
+            Software Engineer at <strong>K3 Advisory Group</strong>. I build the internal AI assistant of the
+            group: chat, document workflows, and Microsoft 365 tools for all staff. Staff use it with sensitive
+            documents such as NDAs, so it runs on Azure in the EU, complies with EU data residency, and is zero data
+            retention (ZDR) compliant.
           </p>
           <p className="lede">
             Before that, I was a consultant at{' '}
