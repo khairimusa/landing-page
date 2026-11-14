@@ -163,8 +163,7 @@ export default function Page() {
         </div>
         <div>
           <p className="lede">
-            Software Engineer at <strong>K3 Advisory Group</strong>, on the internal AI assistant platform of the
-            group: a Next.js and PostgreSQL application on Azure with Entra ID authentication, Microsoft 365
+            Software Engineer at <strong>K3 Advisory Group</strong>, building an internal AI assistant: a Next.js and PostgreSQL application on Azure with Entra ID authentication, Microsoft 365
             integration, RAG on pgvector, and a headless API for other internal systems. All model traffic is zero
             data retention (ZDR), with EU data residency.
           </p>
