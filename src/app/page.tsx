@@ -163,10 +163,10 @@ export default function Page() {
         </div>
         <div>
           <p className="lede">
-            Software Engineer at <strong>K3 Advisory Group</strong>. I build the internal AI assistant of the
-            group: chat, document workflows, and Microsoft 365 tools for all staff. Staff use it with sensitive
-            documents such as NDAs, so it runs on Azure in the EU, complies with EU data residency, and is zero data
-            retention (ZDR) compliant.
+            Software Engineer at <strong>K3 Advisory Group</strong>, on the internal AI assistant platform of the
+            group: a Next.js and PostgreSQL application on Azure with Entra ID authentication, Microsoft 365
+            integration, RAG on pgvector, and a headless API for other internal systems. All model traffic is zero
+            data retention (ZDR), with EU data residency.
           </p>
           <p className="lede">
             Before that, I was a consultant at{' '}
